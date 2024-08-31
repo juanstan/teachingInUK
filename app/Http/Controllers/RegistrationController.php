@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
 {
+
+
+    public function showRegistrationForm()
+    {
+        return view('register');
+    }
+
     public function register(Request $request)
     {
         $validatedData = $request->validate([
