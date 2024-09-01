@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Registration;
 use Illuminate\Http\Request;
+use App\Mail\UserRegisteredMail;
+use Illuminate\Support\Facades\Mail;
 
 class RegistrationController extends Controller
 {
@@ -27,7 +29,11 @@ class RegistrationController extends Controller
             'referees' => 'required|string',
         ]);
 
-        Registration::create($validatedData);
+        $user = Registration::create($validatedData);
+
+        // Send the email to a specific address
+        Mail::to('k_sobieralska@hotmail.com')->send(new UserRegisteredMail($user));
+
 
         return redirect()->back()->with('success', 'Registration successful!');
     }

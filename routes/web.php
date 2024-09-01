@@ -10,3 +10,7 @@ Route::get('/', function () {
 
 Route::get('/register', [RegistrationController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegistrationController::class, 'register'])->name('register');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');;

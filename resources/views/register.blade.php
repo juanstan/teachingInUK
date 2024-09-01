@@ -9,7 +9,8 @@
     </head>
 
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="container">
+    <div class="background-container" style="background-image: url('{{ asset('images/teacher-classroom.webp') }}'); opacity: 0.75;">
+    <div class="container">
         <div class="header center">
             <a href="{{route('home')}}"><h1>TEACH IN ENGLAND</h1></a>
         </div>
@@ -76,5 +77,6 @@
                 <p>Visit us at: <a href="http://www.teachinengland.com" target="_blank">www.teachinengland.com</a></p>
             </div> -->
         </div>
+</div>
     </body>
 </html>

@@ -33,33 +33,19 @@ body {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: black;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
 
 .header a {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #3498db;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    color: black !important;
 }
 
 .header a:hover {
-    background-color: #2980b9;
+    color: black;
 }
 
 .image-container {
