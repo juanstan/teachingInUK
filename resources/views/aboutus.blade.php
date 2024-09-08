@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['resources/css/aboutus.css', 'resources/js/app.js'])
     </head>
 
     <body>
@@ -22,7 +22,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
@@ -68,17 +68,36 @@
                         </div>
                     </div>
                 </div> -->
-                <div class="row top-100">
+                <div class="row top-50">
                     <div class="col-md-4">
                         <div class="quote-box">
                             <div class="card-box pd-50">
-                                <h2>Register with us <br /> and start your journey <br /> as a teacher in UK.</h2>
+                                <h2>To teach in UK you need the following:</h2>
+                                <div class="list-requirements">
+                                    <ul>
+                                        <li>Degree</li>
+                                        <li>Teacher training (<em>Máster profesorado</em>)</li>
+                                        <li>B2 level of English</li>
+                                        <li>9 months teaching experience (not essential)</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-5"></div>
                     <div class="col-md-3 no-space alignRight">
-                    <div class=" quote-box abitsmaller"><div class="pd-50"><h2>Starting salary <br /> from <span class="fontSalary">£31,650</span> <br />  per year <br /> for teachers</h2></div></div>
+                        <div class="quote-box">
+                            <div class="card-box pd-50">
+                                <h2>We offer: </h2>
+                                <div class="list-requirements right">
+                                    <ul>
+                                        <li>Assistance With Validating The Qualification To Teach In UK</li>
+                                        <li>Guiadance For The Intterview</li>
+                                        <li>Secure Your First Teaching Job in the UK!</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

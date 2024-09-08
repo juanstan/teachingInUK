@@ -31,14 +31,6 @@ body::before {
     border-radius: 15px;;
 }
 
-.top-25 {
-    margin-top: 25px;
-}
-
-.top-50 {
-    margin-top: 50px;
-}
-
 .top-100 {
     margin-top: 100px;
 }
@@ -55,16 +47,19 @@ body::before {
     padding: 50px;
 }
 
-.bottom-25 {
-    margin-bottom: 25px;
+.no-space{ 
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-.bottom-50 {
-    margin-bottom: 50px;
+.alignLeft {
+    align-items: flex-start;
+    text-align: left;
 }
 
-.pdt-50 {
-    padding-top: 50px;
+.alignRight {
+    align-items: flex-end;
+    text-align: right;
 }
 
 /* Custom Navbar Styles */
@@ -78,7 +73,7 @@ body::before {
 .navbar-brand {
     font-weight: bold;
     font-size: 3.5rem;
-    margin-left: 20px;
+    margin-left: 60px;
     color: '#fff' !important;
     background-color:#27504c !important;
     position: relative;
@@ -112,19 +107,19 @@ body::before {
 .content {
     text-align: left;
     padding-left: 50px;
-    width: 100%;
-}
-
-.content .form-group {
-    margin-top: 10px;
 }
 
 .quote-box {
-    color: #333;
+    color: beige;
+    line-height: 2;
 }
 
 .quote-box h2 {
     font-weight: bold;
+    line-height: 2;
+    font-family: 'Chalkboard', 'Chalkduster', sans-serif;
+    font-style: italic;
+    text-align: left;
 }
 
 .quote-box .highlight {
@@ -143,56 +138,24 @@ body::before {
 }
 
 .list-requirements ul {
-    font-size: 24px;
+    font-size: 18px;
     padding-top:10px;
 }
 
 .list-requirements ul li {
-    list-style: decimal;
+    list-style: disc;
     margin-top: 10px;
-}
-
-
-h1 {
-    font-size: 36px;
-    text-decoration: underline;
-    margin-bottom: 20px;
-}
-
-.table {
-    width: 95%;
-    border: 1px rgb(34, 25, 25) solid;
-    border-radius: 15px;;
-    background-color: #f9f9f9;
-    padding: 40px 20px 30px 20px;
-}
-
-
-.table input, .table textarea {
-    width: 100%;
-}
-
-.note {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 10px;
     text-align: left;
-    font-size: 18px;
-    background-color: #f9f9f9;
-    display: inline-block;
-    margin-bottom: 50px;
-    width: 96%;
 }
 
-.btn{
-    width: 250px;
-    height: 50px;
+.list-requirements.right ul li {
+    margin-left: 20px;
 }
 
-.center {
-    text-align: center;
+.abitsmaller {
+    width: 90% !important;
 }
-
-.header a {
-    color: black !important;
+.fontSalary{
+    font-size: 40px;
+    font-weight: bolder;
 }

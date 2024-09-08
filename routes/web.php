@@ -13,4 +13,8 @@ Route::post('/register', [RegistrationController::class, 'register'])->name('reg
 
 Route::get('/contact', function () {
     return view('contact');
-})->name('contact');;
+})->name('contact');
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+})->name('aboutus');

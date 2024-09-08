@@ -34,7 +34,13 @@ class UserRegisteredMail extends Mailable
                     ->subject('New User Registration')
                     ->with([
                         'userName' => $this->user->name,
-                        'userEmail' => $this->user->email,
+                        'userNationality' => $this->user->nationality,
+                        'userDegree' => $this->user->degree,
+                        'userDoB' => $this->user->dob,
+                        'userEnglishLevel' => $this->user->english_level,
+                        'userTraining' => $this->user->training,
+                        'userExperience' => $this->user->experience,
+                        'userReferees' => $this->user->referees,
                     ]);
     }
 }

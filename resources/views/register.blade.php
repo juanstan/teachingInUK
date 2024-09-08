@@ -5,67 +5,100 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Teach in England - Register</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
         @vite(['resources/css/register.css'])
     </head>
 
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-    <div class="background-container" style="background-image: url('{{ asset('images/teacher-classroom.webp') }}'); opacity: 0.75;">
-    <div class="container">
-        <div class="header center">
-            <a href="{{route('home')}}"><h1>TEACH IN ENGLAND</h1></a>
-        </div>
-            <form action="{{ route('register') }}" method="POST">
-                @csrf
-                <table>
-                <tr class="form-group">
-                    <th><label for="name">Name and Surname(s)</label>
-                    <td><input type="text" id="name" name="name" value="{{ old('name') }}" required>
-                    @error('name')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="nationality">Nationality</label></th>
-                <td><input type="text" id="nationality" name="nationality" value="{{ old('nationality') }}" required></td>
-                    @error('nationality')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="degree">Degree</label></th>
-                <td><input type="text" id="degree" name="degree" value="{{ old('degree') }}" required></td>
-                    @error('degree')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="dob">Date of Birth</label></th>
-                <td><input type="date" id="dob" name="dob" value="{{ old('dob') }}" required></td>
-                    @error('dob')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="training">Teaching Training (specify)</label></th>
-                <td><input type="text" id="training" name="training" value="{{ old('training') }}" required></td>
-                    @error('training')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="english_level">Minimum B2 Level of English (specify your qualifications)</label></th>
-                <td><input type="text" id="english_level" name="english_level" value="{{ old('english_level') }}" required></td>
-                    @error('english_level')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="experience">Minimum 9 months of teaching experience (specify)</label></th>
-                <td><input type="text" id="experience" name="experience" value="{{ old('experience') }}"></td>
-                    @error('experience')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                <th><label for="referees">Please specify your two potential referees</label></th>
-                <td><textarea id="referees" name="referees" required>{{ old('referees') }}</textarea></td>
-                    @error('referees')<div class="text-danger">{{ $message }}</div>@enderror
-                </tr>
-                <tr class="form-group">
-                    <td colspan="2" class="center"><button type="submit" class="btn">Register</button></td>
-                </tr>
-            </form>
+    <body>
+        <!-- Navigation Bar -->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                <span class="navbar-brand"><span style="color: white; padding: 20px;">TEACH IN UK</span></span>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('register')}}">Register with us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
+            <!-- Main Content -->
+            <div class="content">
 
-            <div class="note">
-                <strong>**References:</strong> During the process you will be asked to provide references. Your references can be provided by an official body such as a school, university. If you are not sure who can be your referee, please contact us.
+                <div class="note">
+                    <strong>**References:</strong> During the process you will be asked to provide references. Your references can be provided by an official body such as a school, university. If you are not sure who can be your referee, please contact us.
+                </div>
+
+                <form action="{{ route('register') }}" method="POST">
+                    @csrf
+
+                    <div class="table pdt-50">
+                
+                        <div class="row">
+                            <div class="col-md-6 th"><label for="name">Name and Surname(s)</label></div>
+                            <div class="col-md-6 td"><input type="text" id="name" name="name" value="{{ old('name') }}" required /></div>
+                            @error('name')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="nationality">Nationality</label></div>
+                            <div class="col-md-6 td"><input type="text" id="nationality" name="nationality" value="{{ old('nationality') }}" required></div>
+                                @error('nationality')<div class="text-danger">{{ $message }}</div>@enderror
+                            </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="degree">Degree</label></div>
+                            <div class="col-md-6 td"><input type="text" id="degree" name="degree" value="{{ old('degree') }}" required></div>
+                                @error('degree')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="dob">Date of Birth</label></div>
+                            <div class="col-md-6 td"><input type="date" id="dob" name="dob" value="{{ old('dob') }}" required></div>
+                                @error('dob')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="training">Teaching Training (specify)</label></div>
+                            <div class="col-md-6 td"><input type="text" id="training" name="training" value="{{ old('training') }}" required></div>
+                                @error('training')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="english_level">Minimum B2 Level of English (specify your qualifications)</label></div>
+                            <div class="col-md-6 td"><input type="text" id="english_level" name="english_level" value="{{ old('english_level') }}" required></div>
+                                @error('english_level')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="experience">Minimum 9 months of teaching experience (specify)</label></div>
+                            <div class="col-md-6 td"><input type="text" id="experience" name="experience" value="{{ old('experience') }}"></div>
+                                @error('experience')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6 th"><label for="referees">Please specify your two potential referees</label></div>
+                            <div class="col-md-6 td"><textarea id="referees" name="referees" required>{{ old('referees') }}</textarea></div>
+                                @error('referees')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12 center top-50 bottom-5">
+                                <button class="btn btn-primary" style="background-color: #27504c; border-color: darkgreen;" type="submit" class="btn ">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
+
 
             @if(session('success'))
                 <div class="alert alert-success">
@@ -73,10 +106,10 @@
                 </div>
             @endif
 
-            <!-- <div class="footer">
-                <p>Visit us at: <a href="http://www.teachinengland.com" target="_blank">www.teachinengland.com</a></p>
-            </div> -->
+                <!-- <div class="footer">
+                    <p>Visit us at: <a href="http://www.teachinengland.com" target="_blank">www.teachinengland.com</a></p>
+                </div> -->
+            
         </div>
-</div>
     </body>
 </html>
