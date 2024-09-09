@@ -167,3 +167,66 @@ body::before {
     padding: 0;
     margin-left: -20px;
 }
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1900px) {
+    body::before {
+        background-size: 78%; /* Increase the size of the background image */
+        background-position: center top; /* Center the image on smaller screens */
+    }
+}
+@media (max-width: 1500px) {
+    body::before {
+        background-size: 88%; /* Increase the size of the background image */
+        background-position: center top; /* Center the image on smaller screens */
+    }
+}
+@media (max-width: 1200px) {
+    body::before {
+        background-size: 80%; /* Increase the size of the background image */
+        background-position: center top; /* Center the image on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body::before {
+        background-size: cover; /* Make the background image cover the whole screen */
+        opacity: 0.2;
+    }
+    .container {
+        border: 0;
+    }
+    .quote-box {
+        color: black;
+        line-height: 2;
+    }
+    .navbar .navbar-brand {
+        font-size: 22px;
+        display: block;
+        float: right;
+    }
+    .navbar .navbar-toggler {
+
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        background-size: cover; /* Ensure the image covers the entire screen */
+        background-position: 100%; /* Center the image */
+        opacity: 0.2;
+    }
+    .container {
+        border: 0;
+    }
+    .quote-box {
+        color: black;
+        line-height: 2;
+    }
+    .navbar .navbar-brand {
+        font-size: 14px;
+        display: block;
+        float: right;
+    }
+}

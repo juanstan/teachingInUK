@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-        @vite(['resources/css/register.css'])
+        @vite(['resources/css/register.css', 'resources/js/app.js'])
     </head>
 
     <body>
@@ -90,9 +90,17 @@
                             <div class="col-md-6 td"><textarea id="referees" name="referees" required>{{ old('referees') }}</textarea></div>
                                 @error('referees')<div class="text-danger">{{ $message }}</div>@enderror
                         </div>
+                        <!-- Checkbox for accepting terms and conditions -->
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <input type="checkbox" id="terms" name="terms" onchange="toggleSubmit()">
+                                <label for="terms">I accept the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a></label>
+                            </div>
+                            @error('terms')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
                         <div class="form-group row">
                             <div class="col-md-12 center top-50 bottom-5">
-                                <button class="btn btn-primary" style="background-color: #27504c; border-color: darkgreen;" type="submit" class="btn ">Register</button>
+                                <button id="submit-btn" class="btn btn-primary" style="background-color: #27504c; border-color: darkgreen;" type="submit" class="btn " disabled>Register</button>
                             </div>
                         </div>
                     </div>
@@ -106,6 +114,17 @@
                 </div>
             @endif
 
+            <!-- Add the JavaScript to toggle submit button -->
+<script>
+function toggleSubmit() {
+    const termsCheckbox = document.getElementById('terms');
+    const submitButton = document.getElementById('submit-btn');
+    
+    // Enable or disable the submit button based on the checkbox state
+    submitButton.disabled = !termsCheckbox.checked;
+}
+</script>
+
                 <!-- <div class="footer">
                     <p>Visit us at: <a href="http://www.teachinengland.com" target="_blank">www.teachinengland.com</a></p>
                 </div> -->
@@ -113,3 +132,4 @@
         </div>
     </body>
 </html>
+
