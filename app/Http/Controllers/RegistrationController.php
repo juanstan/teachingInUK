@@ -32,7 +32,7 @@ class RegistrationController extends Controller
         $user = Registration::create($validatedData);
 
         // Send the email to a specific address
-        Mail::to('k_sobieralska@hotmail.com')->send(new UserRegisteredMail($user));
+        Mail::to('info@teachinuk.co.uk')->send(new UserRegisteredMail($user));
 
 
         return redirect()->back()->with('success', 'Registration successful!');

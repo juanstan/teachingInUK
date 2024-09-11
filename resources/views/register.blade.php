@@ -92,9 +92,11 @@
                         </div>
                         <!-- Checkbox for accepting terms and conditions -->
                         <div class="form-group row">
-                            <div class="col-md-6">
-                                <input type="checkbox" id="terms" name="terms" onchange="toggleSubmit()">
-                                <label for="terms">I accept the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a></label>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-1"><input type="checkbox" id="terms" name="terms" onchange="toggleSubmit()"></div>
+                                    <div class="col-md-11"><label for="terms">I accept the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a></label></div>
+                                </div>
                             </div>
                             @error('terms')<div class="text-danger">{{ $message }}</div>@enderror
                         </div>
@@ -114,22 +116,22 @@
                 </div>
             @endif
 
-            <!-- Add the JavaScript to toggle submit button -->
-<script>
-function toggleSubmit() {
-    const termsCheckbox = document.getElementById('terms');
-    const submitButton = document.getElementById('submit-btn');
-    
-    // Enable or disable the submit button based on the checkbox state
-    submitButton.disabled = !termsCheckbox.checked;
-}
-</script>
-
                 <!-- <div class="footer">
                     <p>Visit us at: <a href="http://www.teachinengland.com" target="_blank">www.teachinengland.com</a></p>
                 </div> -->
             
         </div>
+
+                    <!-- Add the JavaScript to toggle submit button -->
+                    <script>
+                    function toggleSubmit() {
+                        const termsCheckbox = document.getElementById('terms');
+                        const submitButton = document.getElementById('submit-btn');
+                        
+                        // Enable or disable the submit button based on the checkbox state
+                        submitButton.disabled = !termsCheckbox.checked;
+                    }
+                    </script>
     </body>
 </html>
 
