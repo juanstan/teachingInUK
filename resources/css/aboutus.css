@@ -166,6 +166,7 @@ body::before {
     body::before {
         background-size: 78%; /* Increase the size of the background image */
         background-position: center top; /* Center the image on smaller screens */
+        background-color: #27504c;
     }
 }
 @media (max-width: 1500px) {
@@ -198,15 +199,19 @@ body::before {
         display: block;
         float: right;
     }
-    .navbar .navbar-toggler {
-
-    }
 }
 
 @media (max-width: 480px) {
+    body {
+        position: relative;
+        height: 140vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
     body::before {
         background-size: cover; /* Ensure the image covers the entire screen */
         background-position: 100%; /* Center the image */
+        background-color: #27504c;
         opacity: 0.2;
     }
     .container {

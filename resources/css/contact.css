@@ -168,18 +168,25 @@ body::before {
     margin-left: -20px;
 }
 
-
 /* Media queries for responsiveness */
 @media (max-width: 1900px) {
     body::before {
         background-size: 78%; /* Increase the size of the background image */
         background-position: center top; /* Center the image on smaller screens */
     }
+    
 }
 @media (max-width: 1500px) {
     body::before {
         background-size: 88%; /* Increase the size of the background image */
         background-position: center top; /* Center the image on smaller screens */
+    }
+    .card-box h2  {
+        color: black !important;
+        line-height: 2;
+    }
+    .card-box ul li {
+        color: black !important;
     }
 }
 @media (max-width: 1200px) {

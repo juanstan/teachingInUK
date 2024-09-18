@@ -200,6 +200,12 @@ h1 {
 
 /* Media queries for responsiveness */
 @media (max-width: 1900px) {
+    body {
+        position: relative;
+        height: 160vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
     body::before {
         background-size: 78%; /* Increase the size of the background image */
         background-position: center top; /* Center the image on smaller screens */
