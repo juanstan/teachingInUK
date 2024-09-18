@@ -95,7 +95,7 @@
                             <div class="col-md-12">
                                 <div class="row">
                                     <div class="col-md-1"><input type="checkbox" id="terms" name="terms" onchange="toggleSubmit()"></div>
-                                    <div class="col-md-11"><label for="terms">I accept the <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a></label></div>
+                                    <div class="col-md-11"><label for="terms">I accept the <a href="/documents/terms-and-conditions.docx" target="_blank">Terms and Conditions</a></label></div>
                                 </div>
                             </div>
                             @error('terms')<div class="text-danger">{{ $message }}</div>@enderror
