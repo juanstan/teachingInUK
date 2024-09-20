@@ -47,7 +47,7 @@
                                 <h2>Please contact us:</h2>
                                 <ul>
                                     <li>Phone: +447570945349</li>
-                                    <li>hello@teachingInEngland.com</li>
+                                    <li>info@teachinuk.co.uk</li>
                                 </ul>
                             </div>
                         </div>
