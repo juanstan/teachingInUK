@@ -15,7 +15,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                <span class="navbar-brand"><span style="color: white; padding: 20px;">TEACH IN UK</span></span>
+                <span class="navbar-brand"><span style="color: white; padding: 20px;"><a style="color: white; text-decoration:none" href="{{route('home')}}">TEACH IN UK</a></span></span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

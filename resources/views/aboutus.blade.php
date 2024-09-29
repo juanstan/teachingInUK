@@ -15,7 +15,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <span class="navbar-brand"><span style="color: white; padding: 20px;">TEACH IN UK</span></span>
+                    <span class="navbar-brand"><span style="color: white; padding: 20px;"><a style="color: white; text-decoration:none" href="{{route('home')}}">TEACH IN UK</a></span></span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -69,7 +69,7 @@
                     </div>
                 </div> -->
                 <div class="row top-50">
-                    <div class="col-md-4">
+                    <div class="col-xl-4">
                         <div class="quote-box">
                             <div class="card-box pd-50">
                                 <h2>To teach in UK you need the following:</h2>
@@ -84,8 +84,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5"></div>
-                    <div class="col-md-3 no-space alignRight">
+                    <div class="col-xl-5"></div>
+                    <div class="col-xl-3 no-space alignRight">
                         <div class="quote-box">
                             <div class="card-box pd-50">
                                 <h2>We offer: </h2>

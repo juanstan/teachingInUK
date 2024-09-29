@@ -16,8 +16,8 @@ body::before {
     background-image: url('/images/teachingUK3.png');
     background-color: #4a4545;
     background-repeat: no-repeat;
-    background-size: 68%;
-    background-position: 310px -50px;
+    background-size: 68.5%;
+    background-position: 300px -50px;
     opacity: 0.8; /* Change opacity value here */
     z-index: -1; /* Ensure the image is behind the content */
 }
@@ -202,12 +202,11 @@ h1 {
 @media (max-width: 1900px) {
     body {
         position: relative;
-        height: 160vh;
         margin: 0;
         font-family: Arial, sans-serif;
     }
     body::before {
-        background-size: 78%; /* Increase the size of the background image */
+        background-size: 76%; /* Increase the size of the background image */
         background-position: center top; /* Center the image on smaller screens */
     }
 }
@@ -219,15 +218,10 @@ h1 {
 }
 @media (max-width: 1200px) {
     body::before {
-        background-size: 80%; /* Increase the size of the background image */
-        background-position: center top; /* Center the image on smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    body::before {
-        background-size: cover; /* Make the background image cover the whole screen */
+        background-size: cover; /* Ensure the image covers the entire screen */
+        background-position: 100%; /* Center the image */
         opacity: 0.2;
+        height: 200vh;
     }
     .container {
         border: 0;
@@ -236,17 +230,31 @@ h1 {
         color: black;
         line-height: 2;
     }
-    .navbar .navbar-brand {
-        font-size: 22px;
-        display: block;
-        float: right;
+    .container-fluid {
+        x-border: 2px red solid;
     }
-    .navbar .navbar-toggler {
+    .navbar .navbar-brand {
+        font-size: 40px;
+        display: block;
+        float: left;
+        margin: 0;
+    }
+    .navbar .navbar-brand span {
+        padding: 40px !important;
+    }
+    .content {
+        margin-top: 0;
+    }
+    .top-100 {
+        margin-top: 0;
+    }
 
+    .alignRight{
+        text-align: unset;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     body::before {
         background-size: cover; /* Ensure the image covers the entire screen */
         background-position: 100%; /* Center the image */
@@ -259,9 +267,66 @@ h1 {
         color: black;
         line-height: 2;
     }
+    .container-fluid {
+        x-border: 2px red solid;
+    }
     .navbar .navbar-brand {
-        font-size: 14px;
+        font-size: 30px;
         display: block;
-        float: right;
+        float: left;
+        margin: 0;
+    }
+    .navbar .navbar-brand span {
+        padding: 40px !important;
+    }
+    .content {
+        margin-top: 0;
+        padding-left: 0;
+    }
+    .top-100 {
+        margin-top: 0;
+    }
+
+    .alignRight{
+        text-align: unset;
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        background-size: cover; /* Ensure the image covers the entire screen */
+        background-position: 100%; /* Center the image */
+        opacity: 0.2;
+        height: 180vh;
+    }
+    .container {
+        border: 0;
+    }
+    .quote-box {
+        color: black;
+        line-height: 2;
+    }
+    .container-fluid {
+        x-border: 2px red solid;
+    }
+    .navbar .navbar-brand {
+        font-size: 20px;
+        display: block;
+        float: left;
+        margin: 0;
+    }
+    .navbar .navbar-brand span {
+        padding: 40px !important;
+    }
+    .content {
+        margin-top: 0;
+        padding-left: 0;
+    }
+    .top-100 {
+        margin-top: 0;
+    }
+
+    .alignRight{
+        text-align: unset;
     }
 }

@@ -15,7 +15,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                <span class="navbar-brand"><span style="color: white; padding: 20px;">TEACH IN UK</span></span>
+                <span class="navbar-brand"><span style="color: white; padding: 20px;"><a style="color: white; text-decoration:none" href="{{route('home')}}">TEACH IN UK</a></span></span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -41,12 +41,12 @@
             <!-- Main Content -->
             <div class="content">
                 <div class="row top-100">
-                    <div class="col-md-4">
+                    <div class="col-xl-4">
                         <div class="quote-box">
                             <div class="card-box pd-50">
                                 <h2>Please contact us:</h2>
                                 <ul>
-                                    <li>Phone: +447570945349</li>
+                                    <li>+447570945349</li>
                                     <li>info@teachinuk.co.uk</li>
                                 </ul>
                             </div>
