@@ -13,31 +13,36 @@
     <body>
         <!-- Navigation Bar -->
         <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <span class="navbar-brand"><span style="color: white; padding: 20px;">TEACH IN UK</span></span>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{route('register')}}">Register with us</a>
-                            </li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span style="color: white; padding: 20px;">TEACH IN UK</span>
+                </a>
+                <!-- Hamburger Menu Toggler -->
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Overlay for clicking outside the menu to close it -->
+                <div class="overlay" id="nav-overlay" onclick="toggleMenu()"></div>
+                <!-- Collapsible Menu -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('register')}}">Register with us</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-
+            </div>
+        </nav>
             <!-- Main Content -->
             <div class="content">
                 <!-- <div class="row">
