@@ -20,6 +20,8 @@ class RegistrationController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:15',
             'nationality' => 'required|string|max:255',
             'degree' => 'required|string|max:255',
             'dob' => 'required|date',

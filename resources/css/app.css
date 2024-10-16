@@ -181,7 +181,7 @@ body::before {
         background-size: cover; /* Ensure the image covers the entire screen */
         background-position: 100%; /* Center the image */
         opacity: 0.2;
-        height: 200vh;
+        height: 140vh;
     }
     .container {
         border: 0;

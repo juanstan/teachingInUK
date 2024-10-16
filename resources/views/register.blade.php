@@ -55,6 +55,16 @@
                             <div class="col-md-6 td"><input type="text" id="name" name="name" value="{{ old('name') }}" required /></div>
                             @error('name')<div class="text-danger">{{ $message }}</div>@enderror
                         </div>
+                        <div class="row">
+                            <div class="col-md-6 th"><label for="name">Email</label></div>
+                            <div class="col-md-6 td"><input type="text" id="email" name="email" value="{{ old('email') }}" required /></div>
+                            @error('email')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 th"><label for="name">Mobile Number</label></div>
+                            <div class="col-md-6 td"><input type="text" id="mobile" name="mobile" value="{{ old('mobile') }}" required /></div>
+                            @error('mobile')<div class="text-danger">{{ $message }}</div>@enderror
+                        </div>
                         <div class="form-group row">
                             <div class="col-md-6 th"><label for="nationality">Nationality</label></div>
                             <div class="col-md-6 td"><input type="text" id="nationality" name="nationality" value="{{ old('nationality') }}" required></div>
