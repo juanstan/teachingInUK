@@ -197,6 +197,9 @@ h1 {
     color: black !important;
 }
 
+.limit-size {
+    width: 96%;
+}
 
 /* Media queries for responsiveness */
 @media (max-width: 1900px) {

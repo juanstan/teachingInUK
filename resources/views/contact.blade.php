@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Teach in England - Register</title>
+        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -22,7 +23,7 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
+                                <a class="nav-link active" aria-current="page" href="{{route('v')}}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('aboutus')}}">About Us</a>

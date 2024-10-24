@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Teach in England - Register</title>
+        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -44,6 +45,13 @@
                 <div class="note">
                     <strong>**References:</strong> During the process you will be asked to provide references. Your references can be provided by an official body such as a school, university. If you are not sure who can be your referee, please contact us.
                 </div>
+
+                @if(session('success'))
+                    <div id="success-message" class="alert alert-success limit-size">
+                        {{ session('success') }}
+                        <p>Redirecting in 3 seconds...</p>
+                    </div>
+                @endif
 
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
@@ -119,13 +127,6 @@
                 </form>
             </div>
 
-
-            @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
                 <!-- <div class="footer">
                     <p>Visit us at: <a href="http://www.teachinengland.com" target="_blank">www.teachinengland.com</a></p>
                 </div> -->
@@ -134,13 +135,20 @@
 
                     <!-- Add the JavaScript to toggle submit button -->
                     <script>
-                    function toggleSubmit() {
-                        const termsCheckbox = document.getElementById('terms');
-                        const submitButton = document.getElementById('submit-btn');
-                        
-                        // Enable or disable the submit button based on the checkbox state
-                        submitButton.disabled = !termsCheckbox.checked;
-                    }
+                        function toggleSubmit() {
+                            const termsCheckbox = document.getElementById('terms');
+                            const submitButton = document.getElementById('submit-btn');
+                            
+                            // Enable or disable the submit button based on the checkbox state
+                            submitButton.disabled = !termsCheckbox.checked;
+                        }
+                        // Check if the success message is present
+                        if (document.getElementById('success-message')) {
+                            // Redirect after 5 seconds (5000 milliseconds)
+                            setTimeout(function() {
+                                window.location.href = "{{ route('home') }}"; // Change this to your desired route
+                            }, 3000);
+                        }
                     </script>
     </body>
 </html>
