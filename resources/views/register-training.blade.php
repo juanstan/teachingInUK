@@ -12,7 +12,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('register') }}" method="POST">
+                <form action="{{ route('register.teacher.training.submit') }}" method="POST">
                     @csrf
                     <div class="table">
                         <div class="row">

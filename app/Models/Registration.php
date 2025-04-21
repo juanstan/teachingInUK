@@ -25,5 +25,6 @@ class Registration extends Model
         'english_level',
         'experience',
         'referees',
+        'settled',
     ];
 }

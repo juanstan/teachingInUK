@@ -24,11 +24,8 @@ class RegistrationController extends Controller
             'mobile' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:15',
             'nationality' => 'required|string|max:255',
             'degree' => 'required|string|max:255',
-            'dob' => 'required|date',
             'training' => 'required|string|max:255',
             'english_level' => 'required|string|max:255',
-            'settled' => 'required|string|max:255',
-            'referees' => 'required|string',
         ]);
 
         $user = Registration::create($validatedData);
@@ -52,11 +49,11 @@ class RegistrationController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'mobile' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10|max:15',
-            'dob' => 'required|date',
             'nationality' => 'required|string|max:255',
             'degree' => 'required|string|max:255',
             'english_level' => 'required|string|max:255',
-            'referees' => 'nullable|string',
+            'name' => 'required',
+            'settled' => 'required|string|max:255',
             // any other specific fields for training
         ]);
 

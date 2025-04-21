@@ -43,6 +43,7 @@ class UserRegisteredMail extends Mailable
                         'userTraining' => $this->user->training,
                         'userExperience' => $this->user->experience,
                         'userReferees' => $this->user->referees,
+                        'settled' => $this->user->settled,
                     ]);
     }
 }
