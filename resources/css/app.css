@@ -69,12 +69,13 @@ body::before {
     background-color: transparent !important;
     position: relative;
     z-index: 2;
+    flex-direction: row;
+    margin: 0;
 }
 
 .navbar-brand {
     font-weight: bold;
     font-size: 3.5rem;
-    margin-left: 60px;
     color: '#fff' !important;
     background-color:#27504c !important;
     position: relative;
@@ -105,10 +106,12 @@ body::before {
     color: #555; /* Adjust hover effect if needed */
 }
 
+.navbar-nav .nav-item {
+    font-size: x-large !important;
+}
+
 .content {
     text-align: left;
-    margin-top: 100px;
-    padding-left: 50px;
 }
 
 .quote-box {
@@ -183,6 +186,9 @@ body::before {
         opacity: 0.2;
         height: 140vh;
     }
+    .navbar-nav .nav-item {
+        font-size: large !important;
+    }
     .container {
         border: 0;
     }
@@ -200,7 +206,7 @@ body::before {
         margin: 0;
     }
     .navbar .navbar-brand span {
-        padding: 40px !important;
+        padding: 10px !important;
     }
     .content {
         margin-top: 0;
@@ -313,7 +319,7 @@ body::before {
         margin: 0;
     }
     .navbar .navbar-brand span {
-        padding: 40px !important;
+        padding: 10px !important;
     }
     .content {
         margin-top: 0;

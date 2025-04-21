@@ -97,6 +97,7 @@ body::before {
     font-weight: bold;
     margin-right: 20px;
     color: white;
+    font-size: xx-large;
 }
 
 .navbar-nav .nav-link:visited {
@@ -109,9 +110,9 @@ body::before {
     color: #555; /* Adjust hover effect if needed */
 }
 
+
 .content {
     text-align: left;
-    padding-left: 50px;
     width: 100%;
 }
 
@@ -160,7 +161,7 @@ h1 {
 }
 
 .table {
-    width: 95%;
+    width: 90%;
     border: 1px rgb(34, 25, 25) solid;
     border-radius: 15px;;
     background-color: #f9f9f9;
@@ -181,7 +182,7 @@ h1 {
     background-color: #f9f9f9;
     display: inline-block;
     margin-bottom: 50px;
-    width: 96%;
+    width: 100%;
 }
 
 .btn{
@@ -199,6 +200,20 @@ h1 {
 
 .limit-size {
     width: 96%;
+}
+
+.form-check {
+    margin-right: 40px;;
+}
+
+.form-check-label {
+    position: absolute;
+    padding-left: 10px;
+}
+
+.form-check-input {
+    width: 100px;
+    padding: 10px;
 }
 
 /* Media queries for responsiveness */
@@ -244,6 +259,9 @@ h1 {
     }
     .navbar .navbar-brand span {
         padding: 40px !important;
+    }
+    .navbar-nav .nav-item {
+        font-size: large !important;
     }
     .content {
         margin-top: 0;
@@ -299,7 +317,6 @@ h1 {
     }
 
     .navbar-nav .nav-link {
-        font-size: 1.4rem;
         color: white;
         display: block;
         width: 100%;
