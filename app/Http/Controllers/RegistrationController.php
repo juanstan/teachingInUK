@@ -52,7 +52,6 @@ class RegistrationController extends Controller
             'nationality' => 'required|string|max:255',
             'degree' => 'required|string|max:255',
             'english_level' => 'required|string|max:255',
-            'name' => 'required',
             'settled' => 'required|string|max:255',
             // any other specific fields for training
         ]);
